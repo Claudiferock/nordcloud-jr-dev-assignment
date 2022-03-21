@@ -1,1 +1,0 @@
-export const NETWORKSTATIONS : ReadonlyArray<[number,number,number]> = [[0,0,9], [20,20,6], [10,0,12], [5,5,13], [99,25,2]];
