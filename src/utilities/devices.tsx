@@ -1,1 +1,1 @@
-export const devices : ReadonlyArray<[number,number]> = [[0,0], [100,100], [15,10], [18,18], [13,13], [25,99]];
+export const DEVICES : ReadonlyArray<[number,number]> = [[0,0], [100,100], [15,10], [18,18], [13,13], [25,99]];
