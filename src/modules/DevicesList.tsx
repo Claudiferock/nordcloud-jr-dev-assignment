@@ -1,7 +1,7 @@
 import { DEVICES } from '../utilities/devices';
 import { uid } from '../utilities/utils'
 
-const DevicesList = () => {
+const DevicesList = ( { selectDevice } ) => {
 
   return(
   <>
@@ -10,7 +10,9 @@ const DevicesList = () => {
       {
         DEVICES.map(device => 
           <li key={ uid() }>
-            Device ({ device[0] }, { device[1] })
+            <button onClick={ () => selectDevice(device) }>
+              Device ({ device[0] }, { device[1] })
+            </button>
           </li>
           )
       }
