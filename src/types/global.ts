@@ -1,4 +1,4 @@
-export type Network = [number, number, number];
-export type Device = [number, number];
-export type NetworkState = null | Network;
-export type DeviceState = null | Device;
+export type TNetwork = [number, number, number];
+export type TDevice = [number, number];
+export type TNetworkState = null | TNetwork;
+export type TDeviceState = null | TDevice;
