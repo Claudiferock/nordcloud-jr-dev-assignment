@@ -1,13 +1,13 @@
 import { Network, Device} from '../types/global';
 
-export const uid = () => {
+export const uid = function (): string {
   const head = Date.now().toString(36);
   const tail = Math.random().toString(36).substring(2);
 
   return head + tail;
 }
 
-export const getSpeed = (network: Network, deviceDistance: number) => {
+export const getSpeed = function (network: Network, deviceDistance: number): number {
   const networkReach = network[2];
   //const [networkX, networkY, networkReach] = network;
   //const [deviceX, deviceY] = device;
@@ -17,7 +17,7 @@ export const getSpeed = (network: Network, deviceDistance: number) => {
   return networkSpeed;
 }
 
-export const getDistance = (network: Network, device: Device) => {
+export const getDistance = function (network: Network, device: Device): number {
   // d is the distance between two points (coordinates) in space 
   // d = sqrt((x2 - x1)^2 + (y2 - y1)^2)
   const [x1, y1] = device;
