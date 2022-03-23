@@ -5,8 +5,9 @@ const DevicesList = ( { selectDevice }:any ) => {
 
   return(
   <>
-    <h2>Devices</h2>
-    <ul className='devices'>
+    <h3>Devices</h3>
+    <p>Please select a device's available coordinates to find the best network station for it</p>
+    <ul className='devices-list'>
       {
         DEVICES.map(device => 
           <li key={ uid() }>

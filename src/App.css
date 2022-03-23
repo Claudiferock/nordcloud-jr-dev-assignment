@@ -1,63 +1,3 @@
-
-
-.devices li:hover,
-.devices li:focus,
-.devices li:focus-visible {
-  color: aquamarine;
-  cursor: pointer;
-}
-
-.App {
-  text-align: center;
-  min-height: 100vh;
-  background-color: #282c34;
-  color: white;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* CSS Reset */
 
 *, *::before, *::after {
@@ -114,12 +54,119 @@ button {
   cursor: pointer;
   color: #282c34;
 }
+
 ul {
-  display: flex;
-  justify-content: center;
   list-style: none;
   text-align: center;
 }
 a {
   text-decoration: none;
+}
+
+/* Main CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
+
+:root {
+  /* --color-primary: hsl(35, 99%, 52%); */
+  --color-blue-900: hsl(240, 39%, 14%);
+  --color-blue-500: hsl(189, 43%, 56%);
+  --color-blue-300: hsl(189, 39%, 93%);
+  --color-red-500: hsl(356, 100%, 58%);
+  --color-cyan-500: hsl(173, 99%, 50%);
+  --color-cyan-600: rgb(35, 251, 218);
+  --color-gray-300: hsl(0, 0%, 94%);
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 31;
+}
+
+.App {
+  font-family: 'Oxygen', sans-serif;
+  background-color: var(--color-blue-300);
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: var(--color-blue-900);
+  color: var(--color-blue-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-logo {
+  display: inline-block;
+  height: 10vmin;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 10rem;
+  margin-block: 1rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-block: 0 2.5rem;
+  color: var(--color-cyan-600);
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-block: 0 .5rem;
+}
+
+p {
+  margin-block: .5rem;
+}
+
+.devices-list {
+  display: flex;
+  justify-content: center;
+}
+
+.devices-list button {
+  transition: background-color 200ms ease-in-out;
+}
+
+.devices-list button:hover,
+.devices-list button:focus,
+.devices-list button:focus-visible {
+  background-color: var(--color-cyan-500);
+  outline: 2px solid var(--color-cyan-500);
+  cursor: pointer;
+}
+
+.devices-list button:active {
+  background-color: var(--color-blue-900);
+  color: var(--color-blue-300);
+}
+
+.output {
+  font-size: 1.25rem;
+  color: var(--color-cyan-500);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
