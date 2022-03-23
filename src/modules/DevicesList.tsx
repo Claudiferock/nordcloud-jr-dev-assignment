@@ -1,7 +1,7 @@
 import { DEVICES } from '../utilities/devices';
 import { uid } from '../utilities/utils'
 
-const DevicesList = ( { selectDevice } ) => {
+const DevicesList = ( { selectDevice }:any ) => {
 
   return(
   <>
