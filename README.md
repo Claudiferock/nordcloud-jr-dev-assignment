@@ -21,4 +21,4 @@ This project is based on a coding assignment for [NordCloud](https://nordcloud.c
 
 ## Demo
 
-<a href="https://raw.githubusercontent.com/Claudiferock/nordcloud-jr-dev-assignment/master/public/demo.gif"><img src="https://raw.githubusercontent.com/Claudiferock/nordcloud-jr-dev-assignment/master/public/demo.gif" alt="Gif showing how the app works" width="240"/></a>&nbsp; &nbsp; &nbsp;
+<a href="https://raw.githubusercontent.com/Claudiferock/nordcloud-jr-dev-assignment/master/public/demo.gif"><img src="https://raw.githubusercontent.com/Claudiferock/nordcloud-jr-dev-assignment/master/public/demo.gif" alt="Gif showing how the app works" width="800"/></a>&nbsp; &nbsp; &nbsp;
