@@ -33,8 +33,13 @@ function App() {
         <DevicesList
           selectDevice={ selectDevice }
           />
+        <section className='output-container'>
+          { selectedDevice 
+            ? <p className='output-text'>{ showOutput(selectedDevice, bestStation) }</p>
+            : <p className='output-text'>The best available network will show here</p>
+          }
+        </section>
         <NetworkStationsList />
-        { selectedDevice && <p className='output'>{ showOutput(selectedDevice, bestStation) }</p> }
       </main>
     </div>
   );

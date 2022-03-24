@@ -48,11 +48,9 @@ button {
   border-radius: .25rem;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: system-ui, sans-serif;
   padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
+  margin: .5rem 1rem;
   cursor: pointer;
-  color: #282c34;
 }
 
 ul {
@@ -63,7 +61,7 @@ a {
   text-decoration: none;
 }
 
-/* Main CSS */
+/* General CSS */
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 
@@ -76,6 +74,12 @@ a {
   --color-cyan-500: hsl(173, 99%, 50%);
   --color-cyan-600: rgb(35, 251, 218);
   --color-gray-300: hsl(0, 0%, 94%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black-900: hsl(0, 0%, 0%);
+  --color-black-600: hsla(0, 0%, 0%, 0.8);
+  --color-black-500: hsla(0, 0%, 0%, 0.75);
+  --color-black-300: hsla(0, 0%, 0%, 0.5);
+  --color-black-100: hsla(0, 0%, 0%, 0.25);
   --typewriterSpeed: 3s;
   --typewriterCharacters: 31;
 }
@@ -87,9 +91,12 @@ a {
   min-height: 100vh;
 }
 
+/* Header */
+
 .App-header {
   background-color: var(--color-blue-900);
   color: var(--color-blue-300);
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,17 +117,30 @@ h1 {
 
 h2 {
   font-size: 2.25rem;
+  font-weight: 300;
   margin-block: 0 2.5rem;
   color: var(--color-cyan-600);
 }
 
+/* Main content */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 69vh;
+}
+
 h3 {
   font-size: 1.75rem;
-  margin-block: 0 .5rem;
 }
 
 p {
   margin-block: .5rem;
+}
+
+.devices-title {
+  margin-block: 2rem 1rem;
 }
 
 .devices-list {
@@ -129,7 +149,10 @@ p {
 }
 
 .devices-list button {
-  transition: background-color 200ms ease-in-out;
+  background-color: var(--color-blue-900);
+  color: var(--color-gray-300);
+  transition: background-color 250ms ease-in-out,
+              color 200ms ease-in-out;
 }
 
 .devices-list button:hover,
@@ -137,6 +160,7 @@ p {
 .devices-list button:focus-visible {
   background-color: var(--color-cyan-500);
   outline: 2px solid var(--color-cyan-500);
+  color: var(--color-blue-900);
   cursor: pointer;
 }
 
@@ -145,9 +169,38 @@ p {
   color: var(--color-blue-300);
 }
 
-.output {
+.output-container {
+  padding-block: 8vh;
+  background-color: var(--color-blue-500);
+}
+
+.output-text {
   font-size: 1.25rem;
-  color: var(--color-cyan-500);
+  color: var(--color-white);
+  text-shadow: var(--color-black-900) .075em .05em .075em;
+}
+
+.output-text-red {
+  color: var(--color-red-500);
+}
+
+.networks-title {
+  margin-block: 0 1rem;
+}
+
+.networks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 0 4rem;
+}
+
+.networks-list li {
+  width: 20rem;
+  text-align: start;
+  font-family: "Courier New", Courier, monospace;
+  font-variant-numeric: tabular-nums;
+  margin-block: 0 .25rem;
 }
 
 @keyframes App-logo-spin {

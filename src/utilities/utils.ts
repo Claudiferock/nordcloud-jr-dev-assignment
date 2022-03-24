@@ -42,6 +42,6 @@ export const getOptimalNetwork = function (device: TDeviceState): TNetworkState 
 
 export const showOutput = function (device: TDevice, network: TNetworkState): string {
   return network === null 
-    ? `No network station within reach for point ${device[0]},${device[1]}` 
-    : `Best network station for point (${device[0]},${device[1]}) is in coordinates (${network[0]},${network[1]}) with a network speed of ${network[2]}`;
+    ? `No network station within reach for coordinates (${device[0]},${device[1]})` 
+    : `Best network station for coordinates (${device[0]},${device[1]}) is in coordinates (${network[0]},${network[1]}) with a network speed of ${network[2]}`;
 }

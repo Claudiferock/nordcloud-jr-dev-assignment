@@ -5,20 +5,20 @@ const NetworkStationsList = () => {
 
   let number = 1;
   return(
-  <>
-    <h3>Network Stations</h3>
+  <section>
+    <h3 className='networks-title'>Network Stations</h3>
     <ul className='networks-list'>
       {
         NETWORKSTATIONS.map(network => {          
           let listItem = <li key={ uid() }>
-            { number }| Coordinates ({ network[0] }, { network[1] }), reach { network[2] }
+            { number } | Coordinates ({ network[0] }, { network[1] }), reach { network[2] }
           </li>;
           number++;
           return listItem;
           })
       }
     </ul>
-  </>
+  </section>
   )
 }
 

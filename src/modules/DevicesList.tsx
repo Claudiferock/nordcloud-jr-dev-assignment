@@ -4,8 +4,8 @@ import { uid } from '../utilities/utils'
 const DevicesList = ( { selectDevice }:any ) => {
 
   return(
-  <>
-    <h3>Devices</h3>
+  <section>
+    <h3 className='devices-title'>Devices</h3>
     <p>Please select a device's available coordinates to find the best network station for it</p>
     <ul className='devices-list'>
       {
@@ -18,7 +18,7 @@ const DevicesList = ( { selectDevice }:any ) => {
           )
       }
     </ul>
-  </>
+  </section>
   )
 }
 
